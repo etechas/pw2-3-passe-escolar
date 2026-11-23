@@ -1,3 +1,12 @@
+CREATE DATABASE db_passe_escolar;
+USE db_passe_escolar;
 
-
-
+CREATE TABLE tbl_passe_escolar (
+    id BIGINT IDENTITY(1,1) PRIMARY KEY,
+    nome_estudante VARCHAR(100) NOT NULL,
+    cpf VARCHAR(14) NOT NULL UNIQUE,
+    instituicao_ensino VARCHAR(100) NOT NULL,
+    saldo_recarga DECIMAL(10,2) NOT NULL,
+    ativo varchar(10) NOT NULL,
+    data_solicitacao DATETIME2 NOT NULL
+);
